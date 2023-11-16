@@ -9,6 +9,7 @@ for file in $1/$1_unsorted/*.txt; do
     # Skip any lines that are not 12-digit numbers
     if [[ ! $line =~ ^[0-9]{12}$'\r'?$'\n'?$ ]]; then
       echo "Skipping line in $file: $line"
+      echo "$line" >> "$1/$1_unsorted/unrecognized_id_format.txt"
       continue
     fi
 
