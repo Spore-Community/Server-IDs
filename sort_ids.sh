@@ -6,8 +6,8 @@
 for file in $1/$1_unsorted/*.txt; do
   echo "Processing IDs in $file"
   while read line || [[ -n "$line" ]]; do
-    # Skip any lines that are not 12-digit numbers
-    if [[ ! $line =~ ^[0-9]{12}$'\r'?$'\n'?$ ]]; then
+    # Skip any lines that are not 12/10-digit numbers
+    if [[ ! $line =~ ^(?:[0-9]{12}|[0-9]{10})$'\r'?$'\n'?$ ]]; then
       echo "Skipping line in $file: $line"
       echo "$line" >> "$1/$1_unsorted/unrecognized_id_format.txt"
       continue
