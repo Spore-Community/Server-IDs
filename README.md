@@ -23,7 +23,7 @@ One tool for bulk-checking asset IDs is https://github.com/Red-Lattice/spore_id_
 Place all IDs in the appropriate subdirectory based on the item type:
 - assets
 - users
-- sporecasts
+- feeds
 - postcards
 - comments (if applicable)
 - ratings (if applicable)
